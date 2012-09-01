@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>{{ page.title }} <small>Supporting tagline</small></h1>
+	<h1>{{ page.title }} <small>{{ page.tagline }}</small></h1>
 </div>
 
 <div class="row">
@@ -25,16 +25,32 @@
     {% include JB/comments %}
   </div>
   
+  
   <div class="span4">
-    <h4>Published</h4>
-    <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
-
+    <h4>发布日期：{{ page.date | date_to_long_string }}</h4>  
+  <br/>
   {% unless page.tags == empty %}
-    <h4>Tags</h4>
+    <h4>标签</h4>
     <ul class="tag_box">
     {% assign tags_list = page.tags %}
     {% include JB/tags_list %}
     </ul>
   {% endunless %}  
+  <br/>
+  <h4>最近</h4>
+  <br/>
+  <ul class="posts">
+  {% for post in site.posts %}
+    <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>  
+<br/>
+<h4>链接</h4>
+<br/>
+<li class="active"><a href="http://weibo.com/goopm">我的新浪微博</a></li>
+<br/>
+<h4>订阅</h4>
+<br/>
+<li class="active"><a href="/atom.xml">RSS</a></li>
   </div>
 </div>
