@@ -2,7 +2,7 @@
 layout: post
 title: "第一篇博客"
 description: 
-category: "生活"
+category: Life
 tags: [生活]
 ---
 最近突然很想写东西，想找一个地方记录一些代码，记录一些正在学的东西，记录一些乱七八糟的想法。
