@@ -11,6 +11,7 @@ tags: ["windbg调试", "堆栈溢出"]
 先看下各线程的状况：
 
 0:030> !threads
+
 ThreadCount: 51
 UnstartedThread: 0
 BackgroundThread: 4
@@ -84,6 +85,7 @@ XXXX   37    0 000000001f140160      9820 Enabled  0000000000000000:000000000000
 再看看当前堆栈的情况：
 
 0:030> !clrstack
+
 OS Thread Id: 0x1378 (30)
 (!clrstack processes a max of 1000 stack frames)
 Child-SP         RetAddr          Call Site
@@ -124,6 +126,7 @@ Child-SP         RetAddr          Call Site
 这个项目下载的页面是放在Spider.PageData中的，所以：
 
 0:030> !dumpheap -type Spider.PageData
+
          Address               MT     Size
 0000000002bf3ef8 000007ff00242cc8      120    
 0000000002bf85a8 000007ff00242cc8      120    
@@ -150,6 +153,7 @@ Total 14 objects
 上面就是一个个的当前程序正在处理的Spider.PageData了，里面有url信息，接着用!do 连续技找出url：
 
 0:030> !do 0000000002bf3ef8
+
 Name: Spider.PageData
 MethodTable: 000007ff00242cc8
 EEClass: 000007ff002323f8
@@ -162,6 +166,7 @@ Fields:
 
 ------------------------------------------------
 0:030> !do 0000000002bf21d8
+
 Name: System.Uri
 MethodTable: 000007fef86d8010
 EEClass: 000007fef84043a8
@@ -199,6 +204,7 @@ Fields:
 
 ---------------------------------
 0:030> !do 0000000002bf19e0
+
 Name: System.String
 MethodTable: 000007fef922ec90
 EEClass: 000007fef8e3b038
