@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2014 6.1 IM UDP协议分析系列之0x0001【获取好友自定义分组】篇"
+title: "2014 6.1 PC QQ UDP协议分析系列之0x0001【获取好友自定义分组】篇"
 description: ""
 category: "协议分析"
 tags: ["协议分析", "逆向"]
