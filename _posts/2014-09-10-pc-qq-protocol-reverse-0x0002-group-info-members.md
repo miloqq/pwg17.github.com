@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2014 6.1 PC QQ UDP协议分析系列之0x0002【获取群信息及群成员列表】篇"
-description: ""
+description: "pc qq 协议分析"
 category: "协议分析"
 tags: ["协议分析", "逆向"]
 ---
