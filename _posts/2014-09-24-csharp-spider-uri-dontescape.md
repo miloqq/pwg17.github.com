@@ -114,7 +114,7 @@ ok，打完收工。
 
 	Uri uri = new Uri("http://xxxx",true).DontEscape();
 	
-done!
+done，只要浏览器能访问，没有采集不了的页面！
 
 参考链接：
 
