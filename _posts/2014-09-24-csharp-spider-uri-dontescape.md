@@ -124,5 +124,13 @@ done，只要浏览器能访问，没有采集不了的页面！
 <br/>
 <http://msdn.microsoft.com/en-us/library/ee656539(v=vs.110).aspx>
 
+update:
+
+25日更新
+
+对url路径中的%2F进行还原和压缩，这仅仅是c#的问题，linux中，curl 可以得到页面：
+
+	curl -L -c tmp.txt http://www.emeraldinsight.com/toc/f/32/11%2F12
+
 
 
